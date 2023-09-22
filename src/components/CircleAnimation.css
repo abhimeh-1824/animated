@@ -1,0 +1,98 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.text {
+    opacity: 0;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+    animation-delay: 1s;
+    animation-name: text;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.circle {
+    animation-name: circle;
+    transition-delay: 1s;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    border: 3px solid rgb(33, 67, 107);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle-3 {
+    width: 240px;
+    height: 240px;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
+    animation-delay: 3s;
+    animation-timing-function:linear;
+}
+
+.circle-2 {
+    width: 200px;
+    height: 200px;
+    animation-duration: 3s;
+    animation-iteration-count:2;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+}
+
+.circle-1 {
+    width: 160px;
+    height: 160px;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count:3;
+    animation-delay: 1s;
+    animation-name: circle1;
+}
+
+@keyframes circle {
+
+    0%,
+    100% {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes circle1 {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+        /* border-color: rgba(255, 255, 255, 0.767); */
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes text {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
